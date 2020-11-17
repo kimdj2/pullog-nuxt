@@ -5,7 +5,7 @@ import postModule from '@/store/modules/post'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   modules: {
     authModule,
     postModule,

@@ -19,7 +19,9 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "vue-disqus": "^4.0.1",
-    "vue-gtag": "^1.10.0"
+    "vue-gtag": "^1.10.0",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-masonry": "^0.11.8"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
