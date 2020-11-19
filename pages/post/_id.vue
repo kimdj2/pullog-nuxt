@@ -175,7 +175,7 @@ export default {
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: post ? post.description : 'Pullog Engineer Blog',
+          content: post ? post.contents : 'Pullog Engineer Blog',
           vmid: 'description',
         },
         {
@@ -190,6 +190,21 @@ export default {
           content: post ? post.title : 'Engineer Blog',
           template: (chunk) => `${chunk} | Pullog`,
           vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: 'https://www.pullog.tokyo',
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:image',
+          content: post && post.image_path ? post.image_path : 'Engineer Blog',
+          vmid: 'og:image',
+        },
+        {
+          property: 'og:description',
+          content: post && post.description ? post.description : 'Pullog Engineer Blog',
+          vmid: 'og:description',
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
