@@ -5,5 +5,5 @@ build:
     WORKDIR: app
     VUE_APP_API_URL: https://pullog-api.herokuapp.com
 run:
-  web: NODE_ENV=production node server.js
+  web: yarn start
 
