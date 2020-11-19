@@ -105,17 +105,23 @@ import { mapState, mapActions } from 'vuex'
 import { getParseDate } from '@/utils/time'
 import PostMove from '@/components/post/PostMove'
 import { Disqus } from 'vue-disqus'
+
 import 'highlight.js/styles/github.css'
 import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import hljs from 'highlight.js'
-import { Viewer } from '@toast-ui/vue-editor'
 
 export default {
   components: {
     PostMove,
     Disqus,
-    viewer: Viewer,
+  },
+  data() {
+    return {
+      editorOptions: {
+        plugins: [[codeSyntaxHighlight, { hljs }]],
+      },
+    }
   },
   computed: {
     ...mapState('postModule', [
@@ -126,18 +132,11 @@ export default {
       'postLoading',
     ]),
     postId() {
-      return this.$route.params.postId
+      return this.$route.params.id
     },
   },
   async created() {
     await this.getPost({ postId: this.postId })
-  },
-  data() {
-    return {
-      editorOptions: {
-        plugins: [[codeSyntaxHighlight, { hljs }]],
-      },
-    }
   },
   methods: {
     ...mapActions('postModule', {
@@ -148,14 +147,12 @@ export default {
       return getParseDate(dateString)
     },
     movePage(postId) {
-      this.$router.push({ name: 'post-item', params: { postId } })
+      this.$router.push(`/post/${postId}`)
       this.getPost({ postId })
     },
     searchTag(tagName) {
       this.requestClearPosts()
-      this.$router
-        .push({ name: 'post-list-tag', params: { tagName } })
-        .catch(() => {})
+      this.$router.push(`/tag/${tagName}`)
     },
     cutTitleLength(title) {
       if (title.length > 15) {
@@ -164,18 +161,18 @@ export default {
       return title
     },
   },
-  // vue-meta 設定
-  metaInfo() {
+  head() {
     const post = this.post
     return {
-      title: post ? post.title : 'Engineer Blog',
       titleTemplate: '%s | Pullog',
+      title: post ? post.title : 'Engineer Blog',
       htmlAttrs: {
         lang: 'ja-JP',
         dir: 'ltr',
       },
       meta: [
         { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content: post ? post.description : 'Pullog Engineer Blog',
@@ -194,8 +191,8 @@ export default {
           template: (chunk) => `${chunk} | Pullog`,
           vmid: 'og:title',
         },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     }
   },
   async beforeRouterEnter(to, from, next) {

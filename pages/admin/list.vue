@@ -98,10 +98,8 @@ import PageLoading from '@/components/post/PostLoading.vue'
 export default {
   name: 'PostSearchList',
   layout: 'admin',
-  beforeMount() {
-    if (this.clearPostsFlg) {
-      this.clearPosts()
-    }
+  components: {
+    PageLoading,
   },
   computed: {
     ...mapState('postModule', ['posts', 'pageInfo', 'clearPostsFlg']),
@@ -167,8 +165,10 @@ export default {
       return title
     },
   },
-  components: {
-    PageLoading,
+  beforeMount() {
+    if (this.clearPostsFlg) {
+      this.clearPosts()
+    }
   },
 }
 </script>

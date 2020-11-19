@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Pullog',
+    titleTemplate: '%s | Pullog',
     title: 'Engineer Blog',
     meta: [
       { charset: 'utf-8' },
@@ -18,9 +18,10 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: '~/plugins/infiniteloading', ssr: false },
     { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~/plugins/vue-infinite-loading', ssr: false }
-
+    { src: '~/plugins/vue-disqus', ssr: false },
+    { src: '~/plugins/viewer', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

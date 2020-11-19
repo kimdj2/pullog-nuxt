@@ -8,7 +8,9 @@ export default {
     try {
       const res = await API.post('app/auth_user', formData)
       const token = res.data.auth_token
-      window.localStorage.setItem('token', token)
+      if (process.browser) {
+        window.localStorage.setItem('token', token)
+      }
       commit(types.LOGIN_SUCCESS, token)
       this.app.router.push('/admin')
     } catch (error) {
@@ -18,7 +20,13 @@ export default {
   },
   async loadUser({ commit, dispatch }) {
     commit(types.LOAD_USER_PENDING)
-    const token = window.localStorage.getItem('token')
+
+    let token = ''
+
+    if (process.browser) {
+      token = window.localStorage.getItem('token')
+    }
+
     if (!token) {
       commit(types.LOAD_USER_FAIL)
       return null

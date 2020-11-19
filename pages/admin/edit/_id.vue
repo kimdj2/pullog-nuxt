@@ -31,17 +31,17 @@ export default {
       formData: {},
     }
   },
-  async created() {
-    await this.getPost({ postId: this.postId })
-    this.formData = this.getFormData
-    this.loading = false
-  },
   computed: {
     ...mapState('postModule', ['post']),
     ...mapGetters('postModule', ['getFormData']),
     postId() {
-      return this.$route.params.postId
+      return this.$route.params.id
     },
+  },
+  async created() {
+    await this.getPost({ postId: this.postId })
+    this.formData = this.getFormData
+    this.loading = false
   },
   methods: {
     ...mapActions('postModule', ['getPost', 'updatePost', 'clearPosts']),
@@ -52,7 +52,7 @@ export default {
       const formData = this.createFormData(this.formData)
       this.updatePost({ postId: this.postId, params: formData })
       this.clearPosts()
-      this.$router.push({ name: 'admin-post-list' })
+      this.$router.push('/admin/list')
     },
     createFormData(data) {
       const formData = new FormData()

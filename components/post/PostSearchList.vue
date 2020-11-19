@@ -2,7 +2,7 @@
   <div>
     <v-row v-masonry dense transition-duration="0s">
       <v-col v-if="isMobile" cols="12">
-        <SearchForm />
+        <SearchForm v-if="isMobile" />
       </v-col>
       <v-col
         v-for="post in posts"
@@ -97,13 +97,14 @@ import SearchForm from '@/components/form/SearchForm.vue'
 
 export default {
   name: 'PostSearchList',
+  components: {
+    PageLoading,
+    SearchForm,
+  },
   beforeMount() {
     if (this.clearPostsFlg) {
       this.clearPosts()
     }
-  },
-  mounted() {
-    this.masonryLoad()
   },
   computed: {
     ...mapState('postModule', ['posts', 'pageInfo', 'clearPostsFlg']),
@@ -132,6 +133,11 @@ export default {
       return this.$vuetify.breakpoint.smAndDown
     },
   },
+  mounted() {
+    if (process.browser) {
+      this.masonryLoad()
+    }
+  },
   methods: {
     ...mapActions('postModule', [
       'getPostList',
@@ -144,14 +150,16 @@ export default {
       }, 100)
     },
     async infiniteHandler($state) {
+      console.log(this.$store)
       // 現在ページと全体ページ数が一致（最後のロードまで）する場合はロードしない
       if (this.pageInfo && this.pageInfo.current >= this.pageInfo.pages) {
         $state.complete()
         return
       }
       await this.retrivePostList($state)
-
-      this.masonryLoad()
+      if (process.browser) {
+        this.masonryLoad()
+      }
       $state.loaded()
     },
     async retrivePostList() {
@@ -165,6 +173,8 @@ export default {
         page: page + 1,
         pageParams: this.settingParams(),
       })
+
+      console.log(this.posts)
     },
     callGetParseDate(dateString) {
       return getParseDate(dateString)
@@ -192,38 +202,6 @@ export default {
       }
       return title
     },
-  },
-  components: {
-    PageLoading,
-    SearchForm,
-  },
-  // vue-meta 設定
-  metaInfo: {
-    title: 'Engineer Blog | Pullog',
-    htmlAttrs: {
-      lang: 'ja-JP',
-      dir: 'ltr',
-    },
-    meta: [
-      { charset: 'utf-8' },
-      {
-        name: 'description',
-        content: 'Pullog engineer blog',
-        vmid: 'description',
-      },
-      {
-        name: 'keywords',
-        content: 'rails, ruby, python, nginx, aws, java, javascript, js',
-      },
-      { name: 'author', content: 'inoshishi' },
-      {
-        property: 'og:title',
-        content: 'Engineer Blog',
-        template: (chunk) => `${chunk} | Pullog`,
-        vmid: 'og:title',
-      },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ],
   },
 }
 </script>

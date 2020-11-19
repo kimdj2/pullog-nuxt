@@ -1,11 +1,17 @@
 import axios from 'axios'
 
 const API = axios.create()
+
 API.defaults.baseURL =
   process.env.VUE_APP_API_URL || 'https://pullog-api.herokuapp.com'
+
 API.defaults.withCredentials = true
+
 API.interceptors.request.use((config) => {
-  const token = window.localStorage.getItem('token')
+  let token = ''
+  if (process.browser) {
+    token = window.localStorage.getItem('token')
+  }
   if (token) {
     config.headers.authorization = `Bearer ${token}`
   }
