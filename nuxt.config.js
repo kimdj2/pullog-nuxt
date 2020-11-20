@@ -85,11 +85,8 @@ export default {
               return '/tag/' + tag.name
             })
             routes = routes.concat(tagRoutes)
-            routes = routes.push('/')
             callback(null, routes)
           })
-
-
         })
         .catch(callback)
     },
