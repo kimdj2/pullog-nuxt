@@ -15,7 +15,6 @@ API.interceptors.request.use((config) => {
   if (token) {
     config.headers.authorization = `Bearer ${token}`
   }
-  config.headers['Cache-Control'] = 'no-cache'
   return config
 })
 
