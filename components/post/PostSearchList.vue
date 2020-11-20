@@ -81,7 +81,7 @@
         </v-lazy>
       </v-col>
     </v-row>
-    <infinite-loading :distance="1" @infinite="infiniteHandler">
+    <infinite-loading :distance="500" @infinite="infiniteHandler">
       <span slot="spinner"><PageLoading /></span>
       <span slot="no-more"></span>
       <span slot="no-results"></span>
