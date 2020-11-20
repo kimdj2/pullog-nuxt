@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import API from './utils/API'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -7,7 +8,10 @@ export default {
     title: 'Engineer Blog',
     meta: [
       { charset: 'utf-8' },
-      { name: 'google-site-verification', content: 'Ak8YewlXc4KjrKKH6VRWRXCjvvwdqivNGyUkFlP0mh8' },
+      {
+        name: 'google-site-verification',
+        content: 'Ak8YewlXc4KjrKKH6VRWRXCjvvwdqivNGyUkFlP0mh8',
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
@@ -40,6 +44,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -61,6 +66,32 @@ export default {
           success: colors.green.accent3,
         },
       },
+    },
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.pullog.tokyo',
+    // generate: true,
+    exclude: ['/admin', '/admin/list', '/admin/newpost', '/admin/login'],
+    routes(callback) {
+      API.get('/app/boards')
+        .then((res) => {
+          let routes = res.data.posts.map((post) => {
+            return '/posts/' + post.id
+          })
+          
+          API.get('/app/taglist').then((res2) => {
+            let tagRoutes = res2.data.map((tag) => {
+              return '/tag/' + tag.name
+            })
+            routes = routes.concat(tagRoutes)
+            routes = routes.push('/')
+            callback(null, routes)
+          })
+
+
+        })
+        .catch(callback)
     },
   },
 

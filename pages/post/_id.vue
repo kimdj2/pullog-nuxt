@@ -203,7 +203,10 @@ export default {
         },
         {
           property: 'og:description',
-          content: post && post.description ? post.description : 'Pullog Engineer Blog',
+          content:
+            post && post.description
+              ? post.description
+              : 'Pullog Engineer Blog',
           vmid: 'og:description',
         },
       ],
