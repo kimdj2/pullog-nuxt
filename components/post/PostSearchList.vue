@@ -150,7 +150,6 @@ export default {
       }, 100)
     },
     async infiniteHandler($state) {
-      console.log(this.$store)
       // 現在ページと全体ページ数が一致（最後のロードまで）する場合はロードしない
       if (this.pageInfo && this.pageInfo.current >= this.pageInfo.pages) {
         $state.complete()
@@ -173,8 +172,6 @@ export default {
         page: page + 1,
         pageParams: this.settingParams(),
       })
-
-      console.log(this.posts)
     },
     callGetParseDate(dateString) {
       return getParseDate(dateString)

@@ -7,6 +7,7 @@ export default {
     title: 'Engineer Blog',
     meta: [
       { charset: 'utf-8' },
+      { name: 'google-site-verification', content: 'Ak8YewlXc4KjrKKH6VRWRXCjvvwdqivNGyUkFlP0mh8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
