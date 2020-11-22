@@ -79,9 +79,9 @@ export default {
           let routes = res.data.posts.map((post) => {
             return '/posts/' + post.id
           })
-          
+
           API.get('/app/taglist').then((res2) => {
-            let tagRoutes = res2.data.map((tag) => {
+            const tagRoutes = res2.data.map((tag) => {
               return '/tag/' + tag.name
             })
             routes = routes.concat(tagRoutes)

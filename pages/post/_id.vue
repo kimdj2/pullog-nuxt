@@ -10,8 +10,10 @@
         :next-post="nextPost"
         @movePage="movePage"
       />
-      <v-card-title id="post-title" class="pt-2 font-weight-black">
-        {{ post.title }}
+      <v-card-title class="pt-2 font-weight-black">
+        <h1 id="post-title" class="text-h5 font-weight-black">
+          {{ post.title }}
+        </h1>
       </v-card-title>
       <v-card-subtitle class="font-weight-black mx-2">
         {{ callGetParseDate(post.created_at) }}
@@ -221,6 +223,6 @@ export default {
 </script>
 <style lang="scss">
 #post-title {
-  font-size: 1.5rem;
+  font-family: 'M Plus 1p' !important;
 }
 </style>
