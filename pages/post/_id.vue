@@ -86,8 +86,12 @@
                 v-text="relatedPost.title"
               ></v-card-subtitle>
             </v-img>
-            <v-card-subtitle height="50" class="font-weight-bold">
-              {{ cutTitleLength(relatedPost.title) }}
+            <v-card-subtitle
+              id="resent-post-title"
+              height="50"
+              class="font-weight-bold"
+            >
+              <span>{{ relatedPost.title }}</span>
             </v-card-subtitle>
           </v-card>
         </v-col>
@@ -156,12 +160,6 @@ export default {
       this.requestClearPosts()
       this.$router.push(`/tag/${tagName}`)
     },
-    cutTitleLength(title) {
-      if (title.length > 15) {
-        title = title.substr(0, 15) + '...'
-      }
-      return title
-    },
   },
   head() {
     const post = this.post
@@ -224,5 +222,10 @@ export default {
 <style lang="scss">
 #post-title {
   font-family: 'M Plus 1p' !important;
+}
+#related-post-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
