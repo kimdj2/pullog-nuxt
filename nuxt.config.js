@@ -77,7 +77,7 @@ export default {
       API.get('/app/boards')
         .then((res) => {
           let routes = res.data.posts.map((post) => {
-            return '/posts/' + post.id
+            return '/post/' + post.id
           })
 
           API.get('/app/taglist').then((res2) => {
