@@ -7,7 +7,7 @@
             <v-img :src="require('@/assets/Kim_Dongjin.png')"></v-img>
           </v-avatar>
         </v-col>
-        <v-col cols="9">
+        <v-col cols="9" class="text-right">
           <v-icon>mdi-email</v-icon>
           1222kdj@gmail.com
         </v-col>
