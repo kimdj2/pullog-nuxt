@@ -1,6 +1,8 @@
 <template>
   <v-col cols="12" sm="12" md="3">
     <div ref="sidebarContent" class="sidebar-content" :class="sidebarStyles">
+      <Profile />
+      <br />
       <Category />
       <br />
       <Archive />
@@ -14,6 +16,7 @@
 import Category from '@/components/global/Category'
 import Archive from '@/components/global/Archive'
 import RecentPost from '@/components/global/RecentPost'
+import Profile from '@/components/global/Profile'
 import _ from 'lodash'
 
 export default {
@@ -64,6 +67,7 @@ export default {
     Category,
     Archive,
     RecentPost,
+    Profile,
   },
 }
 </script>

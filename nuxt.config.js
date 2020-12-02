@@ -91,7 +91,11 @@ export default {
         .catch(callback)
     },
   },
-
+  watchers: {
+    webpack: {
+        poll: true
+    }
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
 }
