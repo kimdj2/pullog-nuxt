@@ -12,7 +12,7 @@
           1222kdj@gmail.com
         </v-col>
         <v-col cols="12" class="text-center" align="center">
-          <v-btn nuxt href="https://github.com/kimdj2">
+          <v-btn icon nuxt href="https://github.com/kimdj2">
             <v-icon large color="blue-grey darken-2"> mdi-github </v-icon>
           </v-btn>
         </v-col>
