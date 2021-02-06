@@ -16,10 +16,10 @@
         color="teal lighten-4"
       >
         <v-list-item-content @click="movePage(archive.month)">
-          <v-list-item-title>
+          <v-list-item-subtitle>
             {{ callGetParseMonth(archive.month) }}
             ({{ archive.total_month }})
-          </v-list-item-title>
+          </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
