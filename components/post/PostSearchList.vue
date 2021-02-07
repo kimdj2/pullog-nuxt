@@ -19,6 +19,7 @@
           }"
           min-height="200"
           transition="fade-transition"
+          class="cursor-pointer"
         >
           <v-hover v-slot="{ hover }">
             <router-link tag="div" :to="`/post/${post.id}`">
@@ -205,5 +206,8 @@ export default {
 <style lang="scss">
 #post-list-title {
   font-size: 1.1rem;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 </style>
