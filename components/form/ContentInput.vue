@@ -15,7 +15,6 @@
 <script>
 import API from '@/utils/API'
 import { Editor } from '@toast-ui/vue-editor'
-import 'highlight.js/styles/dracula.css'
 import 'codemirror/lib/codemirror.css'
 import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
