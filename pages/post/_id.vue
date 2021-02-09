@@ -50,7 +50,7 @@
       <Disqus class="ma-4" />
       <br />
       <div class="font-weight-bold mx-4 my-2">Related Posts</div>
-      <v-divider class="mx-4"></v-divider>
+      <v-divider class="ma-4"></v-divider>
       <v-row>
         <v-col
           v-if="relatedPosts.length === 0"
@@ -96,7 +96,7 @@
           </v-card>
         </v-col>
       </v-row>
-      <v-divider class="mx-4 py-3"></v-divider>
+      <v-divider class="ma-4 py-3"></v-divider>
       <post-move
         :before-post="beforePost"
         :next-post="nextPost"
