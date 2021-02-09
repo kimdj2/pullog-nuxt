@@ -52,14 +52,15 @@ export default {
   code {
     font-size: 95% !important;
     font-weight: 500 !important;
+    background-color: transparent !important;
   }
 }
 .tui-editor-contents {
   font-family: 'M Plus 1p', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial',
     '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif !important;
-  pre & {
-    background-color: #282a36;
+  pre {
+    background-color: #f8f8f8;
   }
 }
 </style>

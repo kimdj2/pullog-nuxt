@@ -32,7 +32,7 @@ export default {
       loading: true,
       editorText: '',
       editorOptions: {
-        plugins: [[codeSyntaxHighlight.bind(hljs), { hljs }], colorSyntax],
+        plugins: [[codeSyntaxHighlight, { hljs }], colorSyntax],
         hooks: {
           addImageBlobHook: this.addImageBlobHook.bind(this),
         },
