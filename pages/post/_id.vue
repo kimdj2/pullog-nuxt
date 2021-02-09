@@ -125,7 +125,7 @@ export default {
   data() {
     return {
       editorOptions: {
-        plugins: [[codeSyntaxHighlight, { hljs }]],
+        plugins: [[codeSyntaxHighlight.bind(hljs), { hljs }]],
       },
     }
   },
