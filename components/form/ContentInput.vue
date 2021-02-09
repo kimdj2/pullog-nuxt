@@ -14,14 +14,12 @@
 </template>
 <script>
 import API from '@/utils/API'
-import 'highlight.js/styles/dark.css'
 import { Editor } from '@toast-ui/vue-editor'
+import 'highlight.js/styles/dracula.css'
+import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
 import hljs from 'highlight.js/lib/highlight'
-
-import 'codemirror/lib/codemirror.css'
-import '@toast-ui/editor/dist/toastui-editor.css'
 
 export default {
   components: {
