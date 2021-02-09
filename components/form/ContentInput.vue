@@ -14,7 +14,7 @@
 </template>
 <script>
 import API from '@/utils/API'
-
+import 'highlight.js/styles/dark.css'
 import { Editor } from '@toast-ui/vue-editor'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'

@@ -112,7 +112,7 @@ import { getParseDate } from '@/utils/time'
 import PostMove from '@/components/post/PostMove'
 import { Disqus } from 'vue-disqus'
 
-import 'highlight.js/styles/github.css'
+import 'highlight.js/styles/dark.css'
 import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import hljs from 'highlight.js'
