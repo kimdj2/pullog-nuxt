@@ -54,8 +54,8 @@ export default {
 <style lang="scss">
 .move-page-content {
   .page-button {
-    width: 30%;
-    max-width: 30%;
+    width: 40%;
+    max-width: 40%;
     overflow: hidden;
     &.left {
       span {
