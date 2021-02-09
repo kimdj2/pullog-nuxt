@@ -113,7 +113,7 @@ import PostMove from '@/components/post/PostMove'
 import { Disqus } from 'vue-disqus'
 
 import 'highlight.js/styles/dracula.css'
-// import '@toast-ui/editor/dist/toastui-editor.css'
+import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import hljs from 'highlight.js'
 
