@@ -58,5 +58,8 @@ export default {
   font-family: 'M Plus 1p', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial',
     '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif !important;
+  &pre {
+    background-color:#282a36;
+  }
 }
 </style>
