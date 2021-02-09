@@ -50,7 +50,7 @@ export default {
 .v-application {
   font-family: 'M Plus 1p' !important;
   code {
-    font-size: 95% !important;
+    font-size: 110% !important;
     font-weight: 500 !important;
     background-color: transparent !important;
   }
