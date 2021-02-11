@@ -53,7 +53,7 @@
                 </v-card-subtitle>
                 <v-card-title
                   id="post-list-title"
-                  class="pt-0 font-weight-black"
+                  class="pt-0 font-weight-bold"
                 >
                   {{ cutTitleLength(post.title) }}
                 </v-card-title>

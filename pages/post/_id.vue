@@ -10,7 +10,7 @@
           {{ post.title }}
         </h1>
       </v-card-title>
-      <v-card-subtitle class="font-weight-black mx-2">
+      <v-card-subtitle class="font-weight-bold mx-1">
         {{ callGetParseDate(post.created_at) }}
       </v-card-subtitle>
       <v-card-text class="pb-2">
@@ -38,7 +38,7 @@
       </v-img>
       <v-card-subtitle
         v-if="post.description"
-        class="font-weight-black text-md-h7"
+        class="font-weight-bold text-md-h7"
       >
         {{ post.description }}
       </v-card-subtitle>
