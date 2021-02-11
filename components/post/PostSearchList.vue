@@ -26,6 +26,7 @@
               <v-card
                 :elevation="hover ? 16 : 2"
                 :class="{ 'on-hover': hover }"
+                outlined
               >
                 <v-img
                   v-if="post.image_path"
