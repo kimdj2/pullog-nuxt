@@ -4,12 +4,7 @@
       v-if="postLoading"
       type="article, image, image, list-item-three-line, list-item-three-line, list-item-three-line, list-item-three-line, list-item-three-line"
     ></v-skeleton-loader>
-    <v-card v-else color="white" elevation="2" rounded="lg" min-height="70vh">
-      <post-move
-        :before-post="beforePost"
-        :next-post="nextPost"
-        @movePage="movePage"
-      />
+    <v-card v-else color="white" elevation="0" min-height="70vh">
       <v-card-title class="pt-2 font-weight-black">
         <h1 id="post-title" class="text-h5 font-weight-black">
           {{ post.title }}

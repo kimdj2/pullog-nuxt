@@ -1,10 +1,10 @@
 <template>
-  <v-sheet rounded="lg" elevation="2">
+  <v-sheet elevation="0">
     <v-skeleton-loader
       v-if="loading"
       type="article, list-item-three-line, list-item-three-line"
     ></v-skeleton-loader>
-    <v-card v-else color="transparent" outlined>
+    <v-card v-else color="transparent" >
       <v-subheader>
         <v-icon>mdi-history</v-icon>
         Recent Posts

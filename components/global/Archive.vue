@@ -1,10 +1,10 @@
 <template>
-  <v-sheet rounded="lg" elevation="2">
+  <v-sheet elevation="0">
     <v-skeleton-loader
       v-if="loading"
       type="article, list-item-three-line, list-item-three-line"
     ></v-skeleton-loader>
-    <v-list v-else color="transparent" outlined>
+    <v-list v-else color="transparent">
       <v-subheader color="teal lighten-4">
         <v-icon>mdi-calendar-month</v-icon>
         Archive
