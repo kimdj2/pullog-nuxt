@@ -36,7 +36,7 @@
         gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
       >
       </v-img>
-      <v-card-subtitle class="font-weight-black text-md-h7">
+      <v-card-subtitle v-if="post.description" class="font-weight-black text-md-h7">
         {{ post.description }}
       </v-card-subtitle>
       <v-card-text>
