@@ -5,7 +5,7 @@
       type="article, image, image, list-item-three-line, list-item-three-line, list-item-three-line, list-item-three-line, list-item-three-line"
     ></v-skeleton-loader>
     <v-card v-else color="white" elevation="0" min-height="70vh">
-      <v-card-title class="pt-2 font-weight-black">
+      <v-card-title class="pt-10 font-weight-black">
         <h1 id="post-title" class="text-h5 font-weight-black">
           {{ post.title }}
         </h1>
