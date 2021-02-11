@@ -45,7 +45,13 @@ export default {
 }
 @font-face {
   font-family: 'M Plus 1p';
-  src: url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('truetype');
+  src: url('~@/assets/fonts/MPLUS1p-Black.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-Bold.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-ExtraBold.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-Light.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-Regular.ttf') format('truetype'),
+    url('~@/assets/fonts/MPLUS1p-Thin.ttf') format('truetype');
 }
 .v-application {
   font-family: 'M Plus 1p' !important;
@@ -56,8 +62,8 @@ export default {
   }
 }
 .tui-editor-contents {
-  font-family: 'M Plus 1p', 'Open Sans', 'Helvetica Neue', 'Helvetica',
-    'Arial', '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
+  font-family: 'M Plus 1p', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial',
+    '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif !important;
   font-size: 14px;
   pre {
