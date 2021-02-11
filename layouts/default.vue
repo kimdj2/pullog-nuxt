@@ -48,7 +48,7 @@ export default {
   src: url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('truetype');
 }
 .v-application {
-  font-family: 'mplus-1p-regular' !important;
+  font-family: 'M Plus 1p' !important;
   code {
     font-size: 110% !important;
     font-weight: 500 !important;
@@ -56,7 +56,7 @@ export default {
   }
 }
 .tui-editor-contents {
-  font-family: 'mplus-1p-regular', 'Open Sans', 'Helvetica Neue', 'Helvetica',
+  font-family: 'M Plus 1p', 'Open Sans', 'Helvetica Neue', 'Helvetica',
     'Arial', '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif !important;
   font-size: 14px;
