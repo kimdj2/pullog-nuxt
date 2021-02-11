@@ -1,5 +1,5 @@
 <template>
-  <v-sheet elevation="0">
+  <v-sheet elevation="0" outlined>
     <v-skeleton-loader
       v-if="loading"
       type="article, list-item-three-line, list-item-three-line"

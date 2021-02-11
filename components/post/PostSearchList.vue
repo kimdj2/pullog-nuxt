@@ -23,10 +23,7 @@
         >
           <v-hover v-slot="{ hover }">
             <router-link tag="div" :to="`/post/${post.id}`">
-              <v-card
-                :elevation="hover ? 2 : 0"
-                :class="{ 'on-hover': hover }"
-              >
+              <v-card :elevation="hover ? 2 : 0" :class="{ 'on-hover': hover }">
                 <v-img
                   v-if="post.image_path"
                   :src="post.image_path"
