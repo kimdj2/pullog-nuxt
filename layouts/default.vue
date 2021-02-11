@@ -45,14 +45,60 @@ export default {
 }
 @font-face {
   font-family: 'M Plus 1p';
-  src: url('~@/assets/fonts/MPLUS1p-Black.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-Bold.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-ExtraBold.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-Light.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-Regular.ttf') format('truetype'),
-    url('~@/assets/fonts/MPLUS1p-Thin.ttf') format('truetype');
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Medium.ttf') format('truetype');
+  font-weight: 500;
 }
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Black.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Bold.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-ExtraBold.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Light.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Regular.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'M Plus 1p';
+  src: 
+    url('~@/assets/fonts/MPLUS1p-Thin.ttf') format('woff'),
+    url('~@/assets/fonts/MPLUS1p-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
 .v-application {
   font-family: 'M Plus 1p' !important;
   code {
