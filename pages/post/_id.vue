@@ -61,7 +61,7 @@
           v-else
           :key="relatedPost.id"
           cols="12"
-          md="4"
+          md="6"
         >
           <v-card class="mx-2" @click="movePage(relatedPost.id)">
             <v-img
