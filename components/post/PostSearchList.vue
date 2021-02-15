@@ -116,10 +116,11 @@ export default {
       return this.$route.params.search
     },
     minHeight() {
-      if (this.$vuetify.breakpoint.smAndDown) {
-        return 200
-      }
-      return 150
+      return 200
+      // if (this.$vuetify.breakpoint.smAndDown) {
+      //   return 200
+      // }
+      // return 150
     },
     maxHeight() {
       if (this.$vuetify.breakpoint.smAndDown) {
