@@ -69,7 +69,7 @@
               :src="relatedPost.image_path"
               class="white--text align-center justify-center"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="100"
+              height="200"
             >
             </v-img>
             <v-img
@@ -77,7 +77,7 @@
               :src="require('@/assets/no_image.png')"
               class="align-center justify-center"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="100"
+              height="200"
             >
               <v-card-subtitle
                 class="black--text text-center"
