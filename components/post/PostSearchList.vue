@@ -19,7 +19,6 @@
           }"
           min-height="150"
           transition="fade-transition"
-          class="cursor-pointer"
         >
           <v-hover>
             <v-card>
@@ -31,7 +30,7 @@
                 <v-img
                   v-if="post.image_path"
                   :src="post.image_path"
-                  class="white--text align-center justify-center"
+                  class="white--text align-center justify-center cursor-pointer"
                   :min-height="minHeight"
                   :max-height="maxHeight"
                   :elevation="hover ? 2 : 0"
@@ -46,15 +45,14 @@
               <router-link tag="div" :to="`/post/${post.id}`">
                 <v-card-title
                   id="post-list-title"
-                  class="pt-0 font-weight-bold"
+                  class="pt-0 font-weight-bold cursor-pointer"
                 >
                   {{ cutTitleLength(post.title) }}
                 </v-card-title>
               </router-link>
-              <v-card-text class="pb-0">
+              <v-card-text class="py-0">
                 {{ post.description }}
               </v-card-text>
-              <v-divider class="mx-4 pb-2"></v-divider>
               <v-card-text>
                 <span v-for="tag in post.tag_list" :key="tag">
                   <v-chip
