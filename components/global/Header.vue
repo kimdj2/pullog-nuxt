@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="white">
+    <v-app-bar app color="white" class="elevation-0">
       <v-container class="py-0 fill-height">
         <v-img
           :src="require('@/assets/logo.png')"
