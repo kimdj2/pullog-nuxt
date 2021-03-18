@@ -21,7 +21,7 @@
           transition="fade-transition"
         >
           <v-hover>
-            <v-card>
+            <v-card class="rounded-0" outlined>
               <router-link
                 v-slot="{ hover }"
                 tag="div"
@@ -197,7 +197,7 @@ export default {
 </script>
 <style lang="scss">
 #post-list-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .cursor-pointer {
   cursor: pointer;
