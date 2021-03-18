@@ -34,20 +34,6 @@
                   @load="masonryLoad"
                 >
                 </v-img>
-                <v-img
-                  v-else
-                  :src="require('@/assets/no_image.png')"
-                  class="align-center justify-center"
-                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                  :min-height="minHeight"
-                  :max-height="maxHeight"
-                  @load="masonryLoad"
-                >
-                  <v-card-subtitle
-                    class="black--text text-center font-weight-bold text-h6"
-                    v-text="post.title"
-                  ></v-card-subtitle>
-                </v-img>
                 <v-card-subtitle class="pb-0">
                   {{ callGetParseDate(post.created_at) }}
                 </v-card-subtitle>
