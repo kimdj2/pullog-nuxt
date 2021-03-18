@@ -17,50 +17,60 @@
           :options="{
             threshold: 0.6,
           }"
-          min-height="200"
+          min-height="150"
           transition="fade-transition"
           class="cursor-pointer"
         >
-          <v-hover v-slot="{ hover }">
-            <router-link tag="div" :to="`/post/${post.id}`">
-              <v-card :elevation="hover ? 2 : 0" :class="{ 'on-hover': hover }">
+          <v-hover>
+            <v-card>
+              <router-link
+                v-slot="{ hover }"
+                tag="div"
+                :to="`/post/${post.id}`"
+              >
                 <v-img
                   v-if="post.image_path"
                   :src="post.image_path"
                   class="white--text align-center justify-center"
-                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                   :min-height="minHeight"
                   :max-height="maxHeight"
+                  :elevation="hover ? 2 : 0"
+                  :class="{ 'on-hover': hover }"
                   @load="masonryLoad"
                 >
                 </v-img>
-                <v-card-subtitle class="pb-0">
-                  {{ callGetParseDate(post.created_at) }}
-                </v-card-subtitle>
+              </router-link>
+              <v-card-subtitle class="pb-0">
+                {{ callGetParseDate(post.created_at) }}
+              </v-card-subtitle>
+              <router-link tag="div" :to="`/post/${post.id}`">
                 <v-card-title
                   id="post-list-title"
                   class="pt-0 font-weight-bold"
                 >
                   {{ cutTitleLength(post.title) }}
                 </v-card-title>
-                <v-divider class="mx-4 pb-2"></v-divider>
-                <v-card-text>
-                  <span v-for="tag in post.tag_list" :key="tag">
-                    <v-chip
-                      class="ma-1"
-                      color="indigo lighten-3"
-                      label
-                      small
-                      text-color="white"
-                      @click.stop.prevent="searchTag(tag)"
-                    >
-                      <v-icon left> mdi-tag </v-icon>
-                      {{ tag }}
-                    </v-chip>
-                  </span>
-                </v-card-text>
-              </v-card>
-            </router-link>
+              </router-link>
+              <v-card-text class="pb-0">
+                {{ post.description }}
+              </v-card-text>
+              <v-divider class="mx-4 pb-2"></v-divider>
+              <v-card-text>
+                <span v-for="tag in post.tag_list" :key="tag">
+                  <v-chip
+                    class="ma-1"
+                    color="indigo lighten-3"
+                    label
+                    small
+                    text-color="white"
+                    @click.stop.prevent="searchTag(tag)"
+                  >
+                    <v-icon left> mdi-tag </v-icon>
+                    {{ tag }}
+                  </v-chip>
+                </span>
+              </v-card-text>
+            </v-card>
           </v-hover>
         </v-lazy>
       </v-col>
