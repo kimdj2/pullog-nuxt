@@ -8,7 +8,7 @@ export default {
     try {
       const res = await API.post('app/auth_user', formData)
       const token = res.data.auth_token
-      if (process.browser) {
+      if (process.client) {
         window.localStorage.setItem('token', token)
       }
       commit(types.LOGIN_SUCCESS, token)
@@ -23,7 +23,7 @@ export default {
 
     let token = ''
 
-    if (process.browser) {
+    if (process.client) {
       token = window.localStorage.getItem('token')
     }
 

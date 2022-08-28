@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import { Viewer } from '@toast-ui/vue-editor'
+import { Viewer, Editor } from '@toast-ui/vue-editor'
 
 Vue.component('viewer', Viewer)
+Vue.component('editor', Editor)

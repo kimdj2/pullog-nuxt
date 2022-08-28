@@ -1,16 +1,18 @@
 <template>
-  <editor
-    v-if="!loading"
-    ref="toastuiEditor"
-    :initial-value="editorText"
-    :options="editorOptions"
-    preview-style="vertical"
-    height="500px"
-    initial-edit-type="markdown"
-    v-bind="$attrs"
-    :visible="true"
-    @change="onEditorChange"
-  />
+  <client-only>
+    <editor
+      v-if="!loading"
+      ref="toastuiEditor"
+      :initial-value="editorText"
+      :options="editorOptions"
+      preview-style="vertical"
+      height="500px"
+      initial-edit-type="markdown"
+      v-bind="$attrs"
+      :visible="true"
+      @change="onEditorChange"
+    />
+  </client-only>
 </template>
 <script>
 import API from '@/utils/API'
@@ -20,7 +22,7 @@ import 'highlight.js/styles/github.css'
 import '@toast-ui/editor/dist/toastui-editor.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
-import hljs from 'highlight.js/lib/highlight'
+import hljs from 'highlight.js/lib/common'
 
 export default {
   components: {

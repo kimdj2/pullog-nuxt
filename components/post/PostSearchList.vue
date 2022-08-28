@@ -127,9 +127,7 @@ export default {
     },
   },
   mounted() {
-    if (process.browser) {
-      this.masonryLoad()
-    }
+    this.masonryLoad()
   },
   methods: {
     ...mapActions('postModule', [
@@ -149,7 +147,7 @@ export default {
         return
       }
       await this.retrivePostList($state)
-      if (process.browser) {
+      if (process.client) {
         this.masonryLoad()
       }
       $state.loaded()

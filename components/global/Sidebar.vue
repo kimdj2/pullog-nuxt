@@ -55,12 +55,16 @@ export default {
       this.calculateSidebar()
     }, 100),
     hendleScroll: _.throttle(function () {
-      this.sidebar.windowScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop
+      if (process.client) {
+        this.sidebar.windowScrollTop =
+          window.pageYOffset || document.documentElement.scrollTop
+      }
     }, 100),
     calculateSidebar() {
-      this.sidebar.height = this.$refs.sidebarContent.offsetHeight
-      this.sidebar.windowHeight = window.innerHeight
+      if (process.client) {
+        this.sidebar.height = this.$refs.sidebarContent.offsetHeight
+        this.sidebar.windowHeight = window.innerHeight
+      }
     },
   },
   components: {
