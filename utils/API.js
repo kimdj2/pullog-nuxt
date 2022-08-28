@@ -3,7 +3,7 @@ import axios from 'axios'
 const API = axios.create()
 
 API.defaults.baseURL =
-  process.env.VUE_APP_API_URL || 'http://localhost:3000'
+  process.env.VUE_APP_API_URL || 'https://pullog-api.herokuapp.com'
 
 API.defaults.withCredentials = true
 
