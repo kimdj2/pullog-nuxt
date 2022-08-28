@@ -10,9 +10,9 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build
+RUN yarn build
 
 EXPOSE 3000
 
-CMD ["yarn", "run", "start"]
+CMD ["yarn", "start"]
 
