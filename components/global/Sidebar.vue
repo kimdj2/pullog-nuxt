@@ -20,6 +20,12 @@ import Profile from '@/components/global/Profile'
 import _ from 'lodash'
 
 export default {
+  components: {
+    Category,
+    Archive,
+    RecentPost,
+    Profile,
+  },
   data() {
     return {
       sidebar: {
@@ -66,12 +72,6 @@ export default {
         this.sidebar.windowHeight = window.innerHeight
       }
     },
-  },
-  components: {
-    Category,
-    Archive,
-    RecentPost,
-    Profile,
   },
 }
 </script>

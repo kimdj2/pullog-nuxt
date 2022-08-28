@@ -63,11 +63,13 @@
         </v-chip>
       </template>
     </v-combobox>
-    <ContentInput
-      v-if="!loading"
-      :contents="formData.contents"
-      @contentChange="contentChange"
-    />
+    <client-only>
+      <ContentInput
+        v-if="!loading"
+        :contents="formData.contents"
+        @contentChange="contentChange"
+      />
+    </client-only>
   </v-form>
 </template>
 <script>
@@ -77,7 +79,7 @@ export default {
   components: {
     ContentInput,
   },
-  props: ['initFormData'],
+  props: { initFormData: Object },
   data() {
     return {
       loading: true,

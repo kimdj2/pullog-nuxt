@@ -2,6 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 import API from './utils/API'
 
 export default {
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s | Pullog',
@@ -23,10 +24,11 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/infiniteloading', ssr: false },
-    { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~/plugins/vue-disqus', ssr: false },
-    { src: '~/plugins/viewer', ssr: false },
+    { src: '~/plugins/infiniteloading', mode: 'client' },
+    { src: '~/plugins/vue-masonry', mode: 'client' },
+    { src: '~/plugins/vue-disqus', mode: 'client' },
+    { src: '~/plugins/viewer', mode: 'client' },
+    { src: '~/plugins/editor', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

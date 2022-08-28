@@ -10,7 +10,7 @@ API.defaults.withCredentials = true
 API.interceptors.request.use((config) => {
   let token = ''
   if (process.client) {
-    token = window.localStorage.getItem('token')
+    token = localStorage.getItem('token')
   }
   if (token) {
     config.headers.authorization = `Bearer ${token}`

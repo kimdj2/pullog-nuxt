@@ -43,7 +43,9 @@
         {{ post.description }}
       </v-card-subtitle>
       <v-card-text>
-        <viewer :initial-value="post.contents" :options="editorOptions" />
+        <client-only>
+          <viewer :initial-value="post.contents" :options="editorOptions" />
+        </client-only>
       </v-card-text>
       <Disqus class="ma-4" />
       <br />

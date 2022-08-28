@@ -2,11 +2,13 @@
   <v-card class="elevation-1 pa-3">
     <v-card-title> ポスト編集 </v-card-title>
     <v-card-text>
-      <PostForm
-        v-if="!loading"
-        :init-form-data="formData"
-        @changeFormData="changeFormData"
-      />
+      <client-only>
+        <PostForm
+          v-if="!loading"
+          :init-form-data="formData"
+          @changeFormData="changeFormData"
+        />
+      </client-only>
     </v-card-text>
     <v-col class="text-right">
       <v-btn tile color="success" @click="submitUpdate">

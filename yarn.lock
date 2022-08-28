@@ -1476,17 +1476,17 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@toast-ui/editor-plugin-code-syntax-highlight@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@toast-ui/editor-plugin-code-syntax-highlight/-/editor-plugin-code-syntax-highlight-3.1.0.tgz#3a8b537e03ec495bde8a25d2571a1c28caaa0a4b"
-  integrity sha512-OgX5pZiTnHREoTTXDAFu1k6RzEspGOxeJNRlt/Lnoi1GvLbIpUTTbBcls9becpXT/Qdls++8G3r5C60cVdellA==
+"@toast-ui/editor-plugin-code-syntax-highlight@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@toast-ui/editor-plugin-code-syntax-highlight/-/editor-plugin-code-syntax-highlight-1.0.0.tgz#61898e4f721c63bb28f59e470804b8e62ef9cbe4"
+  integrity sha512-GFC+aAMfEUALw38vo3daOHWF9IO6X7lByXk0WZ6Kr6Bgp8JwsrVwMYPzWReDK+vQqwO7EVmMDltJKYr1Mjo6kA==
   dependencies:
-    prismjs "^1.23.0"
+    highlight.js "^9.18.1"
 
-"@toast-ui/editor-plugin-color-syntax@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@toast-ui/editor-plugin-color-syntax/-/editor-plugin-color-syntax-1.0.1.tgz#d88564310d549b822316c74128c8249404bad357"
-  integrity sha512-8ZnVFmgKGArthwLpNrnax5xx6q+WRlIUXUAev8rQEVKyXKFuK+U/YySixR8FT516779AUObQ2Fpt4KlV1bzUbA==
+"@toast-ui/editor-plugin-color-syntax@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@toast-ui/editor-plugin-color-syntax/-/editor-plugin-color-syntax-3.1.0.tgz#afbaabe7fe315bf6b6c3d9a62564878d0a365549"
+  integrity sha512-UVKfMBPV+3snSaJn9RUKGbxJbgi92D2t68ow8wAjGezvMp1ht4UVETrvomdTGr+RYhXSeH3JvSwN9nmQqw0qzA==
   dependencies:
     tui-color-picker "^2.2.6"
 
@@ -1498,7 +1498,7 @@
     "@types/codemirror" "0.0.71"
     codemirror "^5.48.4"
 
-"@toast-ui/vue-editor@^2.5.0":
+"@toast-ui/vue-editor@^2.0.1":
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/@toast-ui/vue-editor/-/vue-editor-2.5.4.tgz#fc6641d59b4a0d9c52bca2209f3f36e8911fbe77"
   integrity sha512-+1d/ROsKiv0M+hV7cC1E1kOlRWawsghug3ARIJEJR0TAUBhQm5qwaKuuyVclYPjuRpOTVZNppKMTGyNKuTAVug==
@@ -2766,7 +2766,7 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
-codemirror@^5.48.4:
+codemirror@5.65.8, codemirror@^5.48.4:
   version "5.65.8"
   resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.65.8.tgz#50f145ba7eb725091110c31f3a7c1fdef6bdc721"
   integrity sha512-TNGkSkkoAsmZSf6W6g35LMVQJBHKasc2CKwhr/fTxSYun7cn6J+CbtyNjV/MYlFVkNTsqZoviegyCZimWhoMMA==
@@ -4652,6 +4652,11 @@ highlight.js@^11.6.0:
   version "11.6.0"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.6.0.tgz#a50e9da05763f1bb0c1322c8f4f755242cff3f5a"
   integrity sha512-ig1eqDzJaB0pqEvlPVIpSSyMaO92bH1N2rJpLMN/nX396wTpDA4Eq0uK+7I/2XG17pFaaKE0kjV/XPeGt7Evjw==
+
+highlight.js@^9.18.1:
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -7256,11 +7261,6 @@ pretty-time@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
-
-prismjs@^1.23.0:
-  version "1.29.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.29.0.tgz#f113555a8fa9b57c35e637bba27509dcf802dd12"
-  integrity sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"

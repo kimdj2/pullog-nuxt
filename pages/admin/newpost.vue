@@ -2,7 +2,9 @@
   <v-card class="elevation-1 pa-3">
     <v-card-title> ポスト作成 </v-card-title>
     <v-card-text>
-      <PostForm @changeFormData="changeFormData" />
+      <client-only>
+        <PostForm @changeFormData="changeFormData" />
+      </client-only>
     </v-card-text>
     <v-col class="text-right">
       <v-btn tile color="success" @click="submitPost">
